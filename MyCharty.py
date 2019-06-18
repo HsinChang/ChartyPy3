@@ -74,7 +74,7 @@ __version__ = "0.5"
 
 import sys, PSGParse3
 import argparse
-import thulac
+import codecs
 
 DEBUG = False       # set this to 0 if you do not want tracking
 QTREE = False
@@ -298,7 +298,8 @@ if __name__ == "__main__":
       except IOError:
          print("Cannot load grammar:, args.grammar")
       else:
-         thu1 = thulac.thulac(seg_only=True)  #只进行分词，不进行词性标注
-         text = thu1.cut(args.sentence, text=True)  #进行一句话分词
+         fr = codecs.open(args.sentence, "r", "utf-8")
+         text = fr.read()
+         fr.close()
          printParses(parse(text.split(), mygrammar))
 
