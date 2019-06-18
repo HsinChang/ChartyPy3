@@ -1,0 +1,89 @@
+# PSG3.txt
+# very small grammar for Chinese
+# 
+# Grammar:
+S  -> NP VP  # simple sentence rule
+
+NP -> N
+NP -> Art N
+NP -> Art Adj N
+NP -> Adj N
+NP -> Art N PP
+NP -> Art Adj N PP
+NP -> Art N NP
+
+NP -> NP N
+NP -> Adj NP N
+
+
+VP -> V NP
+VP -> V
+VP -> V PP
+VP -> V NP PP
+VP -> Adv V NP
+
+PP -> P NP
+
+
+# Lexicon:
+N   -> 约翰
+N   -> 我
+N   -> 武则天
+N   -> 女士
+N   -> 先生
+N   -> 狗
+N   -> 猫
+N   -> 老鼠
+N   -> 车
+N   -> 球
+N   -> 椅子
+N   -> 饭
+N   -> 领带
+N   -> 她
+N   -> 导弹
+N   -> missiles
+
+Art -> Article  Quantifier
+Article -> 那
+Article -> 这
+Article -> 一
+Quantifier -> 个
+Quantifier -> 位
+Quantifier -> 只
+Quantifier -> 碗
+Quantifier -> 颗
+Quantifier -> 把
+
+
+Adj -> 绿色的
+Adj -> 黄色的
+Adj -> 红色的
+Adj -> 蓝色的
+Adj -> 巨大的
+Adj -> 小巧的
+Adj -> 甜美的
+Adj -> 悲伤的
+Adj -> 骇人的
+Adj -> 可爱的
+
+Adv -> 总是
+Adv -> 昨天
+
+V -> 吻
+V -> 吻了
+V -> 吃
+V -> 吃了
+V -> 杀
+V -> 杀了
+V -> 爱
+V -> 看见
+V -> 看见了
+V -> 遇到
+V -> 追
+V -> 做
+
+P -> on
+P -> in
+P -> beside
+P -> under
+P -> with
