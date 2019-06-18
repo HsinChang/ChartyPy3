@@ -5,24 +5,18 @@
 S  -> NP VP  # simple sentence rule
 
 NP -> N
-NP -> Art N
-NP -> Art Adj N
-NP -> Adj N
-NP -> Art N PP
-NP -> Art Adj N PP
-NP -> Art N NP
-
-NP -> NP N
-NP -> Adj NP N
+NP -> specifier Quantifier N
+NP -> N particle_struct N
+NP -> adj particle_struct N
+NP -> N accusative_marker N
+NP -> NP accusative_marker NP
+NP -> N accusative_marker NP
 
 
 VP -> V NP
 VP -> V
-VP -> V PP
-VP -> V NP PP
-VP -> Adv V NP
 
-PP -> P NP
+
 
 
 # Lexicon:
@@ -41,49 +35,57 @@ N   -> 饭
 N   -> 领带
 N   -> 她
 N   -> 导弹
-N   -> missiles
 
-Art -> Article  Quantifier
-Article -> 那
-Article -> 这
-Article -> 一
+
 Quantifier -> 个
 Quantifier -> 位
 Quantifier -> 只
 Quantifier -> 碗
 Quantifier -> 颗
 Quantifier -> 把
+Quantifier -> 枚
 
+adj -> 白色
+adj -> 黑色
+adj -> 高兴
+adj -> 难过
 
-Adj -> 绿色的
-Adj -> 黄色的
-Adj -> 红色的
-Adj -> 蓝色的
-Adj -> 巨大的
-Adj -> 小巧的
-Adj -> 甜美的
-Adj -> 悲伤的
-Adj -> 骇人的
-Adj -> 可爱的
+specifier -> 这
+specifier -> 那
+specifier -> 一
+specifier -> 两
+specifier -> 三
+specifier -> 条
+
 
 Adv -> 总是
 Adv -> 昨天
+Adv -> 明天
+Adv -> 现在
+Adv -> V particle_adv
 
-V -> 吻
-V -> 吻了
+Particle_time -> 过
+Particle_time -> 了
+Particle_time -> 吗
+Particle_time -> 着
+
+particle_adv -> 地
+particle_struct -> 的
+
+accusative_marker -> 把
+accusative_marker -> 被
+
+pre_pos -> 在
+pre_pos -> 于
+pre_pos -> 向
+
+
 V -> 吃
-V -> 吃了
+V -> 去
 V -> 杀
-V -> 杀了
-V -> 爱
 V -> 看见
-V -> 看见了
 V -> 遇到
-V -> 追
 V -> 做
-
-P -> on
-P -> in
-P -> beside
-P -> under
-P -> with
+V -> 打
+V -> 有
+V -> V Particle_time

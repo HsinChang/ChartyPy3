@@ -29,7 +29,6 @@ VP -> V
 VP -> V PP
 VP -> V NP PP
 VP -> Adv V NP
-
 PP -> P NP
 
 
