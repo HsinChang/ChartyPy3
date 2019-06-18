@@ -58,7 +58,8 @@ def genDict(path):
     mydict = contents.split(u' ')
     # 去除词典List中的重复
     newdict = list(set(mydict))
-    # newdict.remove(u'')
+    newdict.remove(u'')
+    print(newdict)
 
     # 建立词典
     # key为词首字，value为以此字开始的词构成的List
