@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 '''
+This is a splitter with thulac developped by Tsinghua University
+
 import thulac
 
 thu1 = thulac.thulac(seg_only=True)  #只进行分词，不进行词性标注
@@ -20,7 +22,6 @@ numCn = [u'一', u'二', u'三', u'四', u'五', u'六', u'七', u'八', u'九',
 numCn_suffix_date = [u'年', u'月', u'日']
 numCn_suffix_unit = [u'亿', u'万', u'千', u'百', u'十', u'个']
 special_char = [u'(', u')']
-
 
 def proc_num_math(line, start):
     """ 处理句子中出现的数学符号 """
@@ -107,7 +108,7 @@ def divideWords(mydict, sentence):
 def main():
     args = sys.argv[1:]
     if len(args) < 3:
-        print('Usage: python dw.py dict_path test_path result_path')
+        print('Usage: python MySplitter.py dict_path test_path result_path')
         exit(-1)
     dict_path = args[0]
     test_path = args[1]
