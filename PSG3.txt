@@ -15,7 +15,7 @@ NP -> N accusative_marker NP
 
 VP -> V NP
 VP -> V
-
+VP -> Adv V
 
 
 
